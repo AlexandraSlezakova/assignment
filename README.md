@@ -8,8 +8,8 @@ the opposite case (upper to lower and vice versa). It saves the output in JSON f
 ## How to run
 
 Clone project and install `package.json` dependencies via `npm install`. The package has the following scripts defined:
-* “build” compiles the code
-* “run” executes the logic
-* “test” executes unit tests. 
+* `build` compiles the code
+* `run` executes the logic
+* `test` executes unit tests. 
 
 Test results are printed in the console and HTML report is generated using `mochawesome-report-generator`.

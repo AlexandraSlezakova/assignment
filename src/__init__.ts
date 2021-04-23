@@ -1,7 +1,7 @@
 const readline = require('readline');
 const jsonFile = require('fs');
 const now = require("performance-now")
-const main = require('./main');
+const Main = require('./main');
 
 const rl = readline.createInterface( {
     input: process.stdin,
@@ -13,7 +13,7 @@ console.log("Enter input:");
 rl.on('line', (input: string) => {
     let start = now();
 
-    let output = main.main(input);
+    let output = Main.main(input);
 
     let end = now();
 

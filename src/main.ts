@@ -1,4 +1,4 @@
-export const main = function (input: string) {
+export function main(input: string) {
     /* split input string to array */
     let inputArray = input.split("");
 
@@ -13,7 +13,7 @@ export const main = function (input: string) {
  * @brief Reverse input string, each letter has the opposite case
  * @param str input string as array
  */
-function reverseString(str: string[]): string {
+export function reverseString(str: string[]): string {
     let reverseStr = String("");
 
     for (let i = str.length - 1; i >= 0; i--) {
@@ -37,7 +37,7 @@ function reverseString(str: string[]): string {
  * @brief Check if input contains only alphanumeric characters
  * @param inputArray input string split into array
  */
-function isInputValid(inputArray: string[]): boolean {
+export function isInputValid(inputArray: string[]): boolean {
     for (let char of inputArray) {
         if (!isNumber(char) && !isLetter(char)) {
             return false;
@@ -51,14 +51,14 @@ function isInputValid(inputArray: string[]): boolean {
  * @brief Check if character is number
  * @param str string of length 1
  */
-function isNumber(str: string): boolean {
-    return /^\d+$/.test(str);
+export function isNumber(str: string): boolean {
+    return str.length == 1 && /^\d+$/.test(str);
 }
 
 /**
  * @brief Check if character is letter
  * @param str string of length 1
  */
-function isLetter(str: string): boolean {
-    return (str >= 'a' && str <= 'z') || (str >= 'A' && str <= 'Z');
+export function isLetter(str: string): boolean {
+    return str.length == 1 && ((str >= 'a' && str <= 'z') || (str >= 'A' && str <= 'Z'));
 }
