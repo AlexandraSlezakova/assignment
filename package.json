@@ -1,0 +1,21 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "Assignment",
+  "main": "src/__init__.ts",
+  "scripts": {
+    "build": "tsc",
+    "run": "npm run build && node dist/__init__.js",
+    "test": "tsc && mocha test/test.js --reporter mochawesome"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.14.41",
+    "jsonfile": "^6.1.0",
+    "mocha": "^8.3.2",
+    "mochawesome": "^6.2.2",
+    "performance-now": "^2.1.0",
+    "typescript": "^4.2.4"
+  }
+}
