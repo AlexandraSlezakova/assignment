@@ -2,7 +2,7 @@
 var readline = require('readline');
 var jsonFile = require('fs');
 var now = require("performance-now");
-var main = require('./main');
+var Main = require('./main');
 var rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -10,7 +10,7 @@ var rl = readline.createInterface({
 console.log("Enter input:");
 rl.on('line', function (input) {
     var start = now();
-    var output = main.main(input);
+    var output = Main.main(input);
     var end = now();
     if (output == "") {
         console.log("Error: Invalid input");

@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.main = void 0;
-var main = function (input) {
+exports.isLetter = exports.isNumber = exports.isInputValid = exports.reverseString = exports.main = void 0;
+function main(input) {
     /* split input string to array */
     var inputArray = input.split("");
     if (!isInputValid(inputArray)) {
         return "";
     }
     return reverseString(inputArray);
-};
+}
 exports.main = main;
 /**
  * @brief Reverse input string, each letter has the opposite case
@@ -30,6 +30,7 @@ function reverseString(str) {
     }
     return reverseStr;
 }
+exports.reverseString = reverseString;
 /**
  * @brief Check if input contains only alphanumeric characters
  * @param inputArray input string split into array
@@ -43,17 +44,20 @@ function isInputValid(inputArray) {
     }
     return true;
 }
+exports.isInputValid = isInputValid;
 /**
  * @brief Check if character is number
  * @param str string of length 1
  */
 function isNumber(str) {
-    return /^\d+$/.test(str);
+    return str.length == 1 && /^\d+$/.test(str);
 }
+exports.isNumber = isNumber;
 /**
  * @brief Check if character is letter
  * @param str string of length 1
  */
 function isLetter(str) {
-    return (str >= 'a' && str <= 'z') || (str >= 'A' && str <= 'Z');
+    return str.length == 1 && ((str >= 'a' && str <= 'z') || (str >= 'A' && str <= 'Z'));
 }
+exports.isLetter = isLetter;
